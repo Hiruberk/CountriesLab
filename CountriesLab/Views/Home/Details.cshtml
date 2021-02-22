@@ -1,0 +1,11 @@
+﻿@model Country
+
+<h2>The country you selected is @TempData.Peek("Name")</h2>
+
+<p>The official Language of @TempData.Peek("Name") is @TempData.Peek("Lang")</p>
+<p>Official Colors: @TempData.Peek("Colors0"), @TempData.Peek("Colors1"), and @TempData.Peek("Colors2")</p>
+<p>@TempData.Peek("Greet")</p>
+
+<form asp-controller="Home" asp-action="Description">
+      <input type="submit" value="Continue" />
+</form>

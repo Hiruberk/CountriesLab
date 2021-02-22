@@ -1,0 +1,22 @@
+﻿@model List<Country>
+
+@{
+    ViewData["Title"] = "Country Lookup";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the CountrySelector5000!</h1>
+    <br />
+    <form method="post">
+        <p>Select a country and submit to see their details:</p>
+        <label for="Country">Country</label>
+        <select id="Country" name="c">
+           @foreach (Country c in Model)
+           {
+               <option name ="c" value="@c.Name">@c.Name</option>
+           }
+        </select>
+        <input type="submit" value="Lookup" />
+
+    </form>
+</div>
